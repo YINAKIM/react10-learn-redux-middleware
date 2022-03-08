@@ -5,8 +5,10 @@ import App from './App';
 import {applyMiddleware, createStore} from "redux";
 import rootReducer from "./modules";
 import loggerMiddleware from "./lib/loggerMiddleware";
+import { createLogger} from "redux-logger/src";
 
-const store = createStore(rootReducer, applyMiddleware(loggerMiddleware)); // store생성시 미들웨어 적용
+const reduxLogger = createLogger();
+const store = createStore(rootReducer, applyMiddleware(reduxLogger)); // redux-logger 사용한 로그찍 : 매우 깔끔한 콘솔로깅
 
 ReactDOM.render(
     <Provider store={store}>

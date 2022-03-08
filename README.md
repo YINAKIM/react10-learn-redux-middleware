@@ -47,3 +47,8 @@ import loggerMiddleware from "./lib/loggerMiddleware";
 const store = createStore(rootReducer, applyMiddleware(loggerMiddleware)); // store생성시 미들웨어 적용
 ```
 
+
+# redux-logger 활용하기
+>yarn add redux-logger
+>
+
